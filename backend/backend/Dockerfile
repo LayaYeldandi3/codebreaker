@@ -3,8 +3,8 @@ FROM maven:3.9-eclipse-temurin-17 AS build
 WORKDIR /app
 
 # Copy pom.xml and source code from the nested directory
-COPY backend/backend/pom.xml .
-COPY backend/backend/src ./src
+COPY pom.xml .
+COPY src ./src
 
 # Build the JAR package
 RUN mvn clean package -DskipTests
