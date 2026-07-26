@@ -1,8 +1,12 @@
-package com.codebreaker.backend; // Check package name
+package com.codebreaker.backend;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication; // 👈 Make sure this line is present!
 
 @SpringBootApplication
 public class BackendApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(BackendApplication.class, args);
-	}
+
+    public static void main(String[] args) {
+        SpringApplication.run(BackendApplication.class, args);
+    }
 }
