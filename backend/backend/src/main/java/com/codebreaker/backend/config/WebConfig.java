@@ -14,7 +14,7 @@ public class WebConfig {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowCredentials(false); // 👈 Changed to false so wildcards work cleanly across origins
+        config.setAllowCredentials(false);
         config.addAllowedOrigin("*");
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
