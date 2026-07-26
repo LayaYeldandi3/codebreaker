@@ -8,9 +8,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.Map;
 
+//@RestController
+//@RequestMapping("/api/rooms")
+//@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/rooms")
-@CrossOrigin(origins = "*")
+@CrossOrigin(
+        origins = "*",
+        allowedHeaders = "*",
+        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS}
+)
 public class GameController {
 
     @Autowired
